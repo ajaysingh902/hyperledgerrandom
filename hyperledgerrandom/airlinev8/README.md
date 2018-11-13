@@ -26,13 +26,8 @@ composer network list -c admin@airlinev8
 3. compose network upgrade -c admin@airlinev8 -V 0.0.2
 
 
-# Add a new participant
-https://hyperledger.github.io/composer/managing/participant-add.html
-
-composer participant add -d '{"$class":"org.acme.airline.participant.ACMENetworkAdmin","participantKey":"johnd","contact":{"$class":"org.acme.airline.participant.Contact","fName":"John","lname":"Doe","email":"john.doe@acmeairline.com"}}' -c admin@airlinev8
-
 # Issue an identity
-composer identity issue -u johnd -a org.acme.airline.participant.ACMENetworkAdmin#johnd -c admin@airlinev8 -x
+composer identity issue -u ajay -a org.acme.airline.participant.ACMENetworkAdmin#ajay -c admin@airlinev8 -x
 
 # List the identities
 composer identity list -c admin@airlinev8
@@ -62,16 +57,6 @@ composer network ping -c admin@airlinev8
 
 
 
-# 
 
-composer identity issue -
-
-resource:net.biz.tutorial-network.Person#DanSelman@biznet.org
-
-org.acme.airline.participant.ACMENetworkAdmin#raj
-
-composer identity issue -a org.acme.airline.participant.ACMENetworkAdmin#raj -u raj -c admin@airlinev8
-
-composer identity issue -a org.acme.airline.participant.ACMENetworkAdmin#raj@airlinev8 -u raj -c PeerAdmin@hlfv1
 
 
